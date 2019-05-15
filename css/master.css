@@ -1,0 +1,316 @@
+/* #c9c1ac; = brown light* red = #d3325f*/
+/*
+#F05D5E- red
+#EEEBD0 - gray
+363537 -black
+#EBB3A9 - brown
+#E87EA1 - pink*/
+:root {
+  --mainBlack: rgb(71, 73, 84);
+  --mainRed: rgb(162, 103, 105);
+  --mainBrown: rgb(213, 185, 178);
+  --salmao: #ece2d0;
+  --mainWhite: #cebebe;
+}
+html,
+body {
+  overflow-x: hidden;
+  font-family: "Kodchasan", sans-serif !important;
+}
+.main-content {
+  position: relative;
+}
+.primary-color {
+  color: var(--mainRed);
+}
+.info {
+  background-color: var(--mainBrown);
+}
+.info h2 {
+  word-spacing: 0.2rem;
+}
+
+.info-icons a {
+  transition: color 500ms ease-in-out;
+}
+.info-icons a:hover {
+  color: #373e40;
+}
+
+.btn-outline-danger {
+  color: var(--salmao);
+  border-color: var(--salmao);
+  transition: all 500ms ease-in-out;
+}
+.btn-outline-danger:hover {
+  background-color: var(--mainRed);
+  border-color: var(--mainRed);
+}
+/*###HEADER###*/
+header {
+  position: relative;
+}
+#header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/sushi.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: calc(100vh - 70px);
+}
+#header h1 {
+  color: var(--salmao);
+}
+.header-link {
+  display: inline-block;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  background: var(--mainWhite);
+  border-radius: 10px;
+  animation: upanddown 3s infinite ease-in-out forwards;
+  transition: all 1s ease;
+}
+
+.height-90 {
+  min-height: calc(100vh - 70px);
+}
+
+.banner h1 {
+  width: 50%;
+  margin: auto;
+  border-top: 5px dotted var(--mainWhite);
+  border-bottom: 5px dotted var(--mainWhite);
+  animation: fromLeft 2s ease-in forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+.sushi-btn {
+  animation: fromRight 2s ease-in forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+/* ########## navbar ############ */
+
+.navbar {
+  background: var(--mainBrown);
+  padding: 1rem;
+  transition: all 400ms ease-in-out;
+}
+.navbar-background {
+  padding: 0.2rem 1rem;
+}
+.navbar-brand {
+  font-size: 2rem;
+}
+.navbar a {
+  color: var(--mainRed);
+}
+.navbar a:hover {
+  color: var(--mainBlack);
+}
+.toggler-btn {
+  border: 2px solid var(--mainRed);
+  padding: 5px;
+  transition: all 1s ease;
+}
+.bar {
+  width: 30px;
+  height: 3px;
+  margin: 5px;
+  background: var(--mainRed);
+  transition: all 0.5 ease;
+}
+.change .bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.change .bar2 {
+  opacity: 0;
+}
+.change .bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+/* special items */
+#special-items {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/content.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.item-container {
+  position: relative;
+  transition: all 500ms ease-in;
+  border-radius: 0.5rem;
+}
+.item-container:hover {
+  transform: scale(1.1);
+}
+
+#special-items h3 {
+  color: var(--mainBlack);
+  background-color: rgba(236, 226, 208, 0.6);
+  border-radius: 1rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* MENU */
+#menu {
+  padding: 1.5rem 0;
+  background: linear-gradient(
+      rgba(236, 226, 208, 0.7),
+      rgba(236, 226, 208, 0.7)
+    ),
+    url("../img/menu.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+#menu h2,
+#menu h1 {
+  font-weight: 800;
+}
+#menu h1 {
+  font-size: 2.5rem;
+}
+.single-item {
+  border-bottom: 1px solid black;
+}
+/* ################## about ############################ */
+#about {
+  background-color: rgba(213, 185, 178, 0.9);
+}
+.about-pictures {
+  position: relative;
+}
+.about-image {
+  position: absolute;
+  width: 150px;
+  transition: all 1s ease;
+  opacity: 0.9;
+}
+
+.img-1 {
+  left: 0%;
+  top: 0%;
+}
+.img-2 {
+  left: 20%;
+  top: 20%;
+  z-index: 10;
+}
+.img-3 {
+  left: 40%;
+  top: 45%;
+  z-index: 20;
+}
+.img-4 {
+  left: 40%;
+  top: 0%;
+}
+.img-5 {
+  left: 0%;
+  top: 45%;
+}
+.about-image:hover {
+  border: 2px solid black;
+  transform: scale(1.3) rotate(20deg);
+  z-index: 30;
+  opacity: 1;
+}
+.about-pictures:hover .about-image:not(:hover) {
+  opacity: 0.5;
+}
+/* form */
+.height-60 {
+  min-height: 60vh;
+}
+#contact {
+  background-color: var(--mainRed);
+}
+#contact .card {
+  background: rgba(71, 73, 84, 0.2);
+  transition: all 1s ease;
+}
+#contact .card:hover {
+  background: rgba(71, 73, 84, 0.5);
+}
+#contact .card-header {
+  color: var(--mainBlack);
+}
+#contact .input-group-text {
+  background: var(--mainWhite);
+  border-color: var(--mainWhite);
+  color: var(--mainBlack);
+}
+#contact .card input {
+  color: var(--mainBlack);
+}
+#contact .card input::placeholder {
+  color: var(--mainRed);
+}
+
+/* back to top */
+#back-to-top {
+  background: var(--mainBlack);
+  display: inline-block;
+  border-radius: 10px;
+  color: var(--mainWhite);
+  padding: 0.5rem;
+}
+.scrollTop {
+  position: fixed;
+  bottom: 70px;
+  right: 10px;
+}
+/* keyframes */
+@keyframes fromLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes fromRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes upanddown {
+  0% {
+    transform: translateY(-8px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .banner h1 {
+    width: 100%;
+  }
+}
